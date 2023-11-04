@@ -1,0 +1,132 @@
+/* common css start here */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+html{
+    font-size: 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: arial;
+    min-height: 100vh;
+    background: url(../Images/background.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.justify-contant{
+    justify-content: center;
+}
+/* common css ends here */
+
+/* nav bar start */
+nav{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem 0;
+}
+nav .sidebarBtn{
+    color: white;
+    font-size: 4rem;
+    display: inline-block;
+    padding: 0.8rem ;
+    border-radius: 0.5rem;
+}
+.sidebarBtn:hover{
+    background-color: #8621f8;
+}
+nav .sidebarBtn i{
+    cursor: pointer;
+}
+/* nav bar end */
+h1{
+    font-size: 10rem;
+    color: white;
+    text-align: center;
+    margin-top: 15rem;
+}
+span{
+    color: #8621f8;
+}
+/* sidebar starts */
+.sidebar{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.2rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.10s;
+}
+.sidebarBtn:hover{
+    background-color: #8621f8;
+}
+.sidebar.active{
+    opacity: 1;
+    visibility: visible;
+}
+aside{
+    max-width: 35rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    padding: 10rem 0;
+    position: relative;
+    transform: translateX(-100%);
+    transition: 0.30s;
+}
+.sidebar.active aside{
+    transform: translateX(0);
+}
+.sidebar li a{
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 2rem 3rem;
+    transition: 0.35s;
+}
+.sidebar li:hover a{
+    background-color: #8621f8;
+}
+.sidebar li a i{
+    padding-right: 2rem;
+}
+aside .crossbtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 4rem;
+    color: red;
+    margin: 1rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    cursor: pointer;
+    transition: 0.35s;
+    border-radius: .5rem;
+}
+aside .crossbtn:hover{
+    background-color: red;
+    color: white;
+}
+/* sidebar ends */
